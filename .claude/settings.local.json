@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pytest tests/ -v --tb=short)",
+      "Bash(streamlit run:*)",
+      "Bash(curl -s http://localhost:8501)",
+      "Bash(streamlit --version)",
+      "Bash(pkill -f \"streamlit run\")",
+      "Bash(curl -s -o /dev/null -w \"Status: %{http_code}\" http://localhost:8501)",
+      "Bash(curl -s -o /dev/null -w \"Status: %{http_code}\\\\n\" http://localhost:8501)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:8501)",
+      "Bash(pkill -f streamlit)",
+      "Bash(pip install:*)",
+      "Bash(python code/app_kintsugi.py)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://127.0.0.1:7860)",
+      "Bash(kill 36542)",
+      "Bash(xargs kill:*)",
+      "Bash(GRADIO_SERVER_PORT=7860 python code/app_kintsugi.py)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s http://127.0.0.1:7860/)",
+      "Bash(pkill -f app_kintsugi)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:7860/)",
+      "Bash(pkill -f \"python code/app.py\")",
+      "Bash(lsof -ti:7860)",
+      "Bash(lsof -i:7860)"
+    ]
+  }
+}
